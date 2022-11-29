@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import { Box, Center, Flex, Spacer, useToast } from "@chakra-ui/react";
+import { Center, Flex, Spacer, useToast } from "@chakra-ui/react";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import TokenForm from "./components/TokenForm";
@@ -15,6 +15,7 @@ function App() {
     useState<string>("");
   const [token, setToken] = useState<string>("");
   const toast = useToast();
+
   enum Status {
     success = "success",
     error = "error",

@@ -1,10 +1,9 @@
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
-import { useState } from "react";
 
-export interface TokenFormProps {
+type TokenFormProps = {
   handleGenerateToken: () => void;
   token: string;
-}
+};
 
 export default function TokenForm(props: TokenFormProps) {
   return (

@@ -2,7 +2,6 @@ import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
-  ButtonGroup,
   FormControl,
   FormLabel,
   Input,
@@ -11,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 
-export interface RegisterFormProps {
+type RegisterFormProps = {
   email: string;
   setEmail: (email: string) => void;
   password: string;
@@ -19,10 +18,10 @@ export interface RegisterFormProps {
   confirmPassword: string;
   setConfirmPassword: (confirmPassword: string) => void;
   handleSignUp: () => void;
-}
+};
 
 export default function RegisterForm(props: RegisterFormProps) {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<boolean>(false);
   const handleClick = () => setShow(!show);
 
   return (

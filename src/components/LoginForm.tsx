@@ -4,7 +4,6 @@ import {
   Button,
   ButtonGroup,
   FormControl,
-  FormErrorMessage,
   FormLabel,
   Input,
   InputGroup,
@@ -12,17 +11,17 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 
-export interface LoginFormProps {
+type LoginFormProps = {
   email: string;
   setEmail: (email: string) => void;
   password: string;
   setPassword: (password: string) => void;
   handleSignIn: () => void;
   handleSignOut: () => void;
-}
+};
 
 export default function LoginForm(props: LoginFormProps) {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<boolean>(false);
   const handleClick = () => setShow(!show);
 
   return (
